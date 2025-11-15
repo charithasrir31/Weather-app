@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Weather App</title>
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+<header class="topbar">
+<div class="logo">Weather<span class="dot">.</span></div>
+<div class="controls">
+<div class="units">
+<select id="unitsSelect" class="units-select">
+<option value="metric">Metric</option>
+<option value="imperial">Imperial</option>
+</select>
+</div>
+<button id="geoBtn" title="Use my location" class="btn">Use my location</button>
+</div>
+</header>
+
+<section class="search-card glass">
+<div class="search-left">
+<h1 class="city-name">How's the sky looking today?</h1>
+<p class="subtitle">Search for a city, e.g., New York</p>
+<div class="search-row">
+<input id="searchInput" class="search-input" placeholder="Enter city name" />
+<button id="searchBtn" class="btn">Search</button>
+</div>
+<div class="meta-row">
+<div class="meta-item">Feels like: <span id="feelsLike">--</span></div>
+<div class="meta-item">Humidity: <span id="humidity">--</span></div>
+<div class="meta-item">Wind: <span id="wind">--</span></div>
+<div class="meta-item">Precipitation: <span id="precip">--</span></div>
+</div>
+</div>
+
+<div class="search-right">
+<div class="weather-main">
+<img id="icon" alt="weather icon" class="weather-icon" src="./assets/images/icon-sunny.webp" />
+<div class="temp-block">
+<div id="temp" class="temp">--°C</div>
+<div id="condition" class="condition">--</div>
+</div>
+</div>
+<div class="location-block">
+<div id="location">--</div>
+</div>
+</div>
+</section>
+
+<section class="forecast-container">
+<h2>7-Day Forecast</h2>
+<div id="forecast" class="forecast-grid"></div>
+</section>
+
+<section class="hourly-container glass">
+<div class="hourly-header">
+<h3 id="hourlyTitle">Hourly forecast</h3>
+<div class="day-selector">
+<button id="prevDay" class="day-btn"><</button>
+<span id="selectedDay">Today</span>
+<button id="nextDay" class="day-btn">></button>
+</div>
+</div>
+<div id="hourly" class="hourly-grid"></div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
